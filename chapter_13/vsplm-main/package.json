@@ -1,0 +1,158 @@
+{
+    "name": "vsplm",
+    "displayName": "VS PLM",
+    "description": "Linting support for python files using a PLM.",
+    "version": "2022.0.0-dev",
+    "preview": true,
+    "serverInfo": {
+        "name": "VS PLM",
+        "module": "vsplm"
+    },
+    "publisher": "Miroslaw Staron",
+    "license": "MIT",
+    "homepage": "https://github.com/miroslawstaron/vsplm",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/miroslawstaron/vsplm.git"
+    },
+    "bugs": {
+        "url": "https://github.com/miroslawstaron/vsplm/issues"
+    },
+    "galleryBanner": {
+        "color": "#1e415e",
+        "theme": "dark"
+    },
+    "keywords": [
+        "python",
+        "vsplm"
+    ],
+    "engines": {
+        "vscode": "^1.78.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Linters",
+        "Formatters"
+    ],
+    "extensionDependencies": [
+        "ms-python.python"
+    ],
+    "capabilities": {
+        "virtualWorkspaces": {
+            "supported": false,
+            "description": "Virtual Workspaces are not supported with VS PLM."
+        }
+    },
+    "activationEvents": [
+        "onLanguage:python",
+        "workspaceContains:*.py"
+    ],
+    "main": "./dist/extension.js",
+    "scripts": {
+        "vscode:prepublish": "npm run package",
+        "compile": "webpack",
+        "watch": "webpack --watch",
+        "package": "webpack --mode production --devtool source-map --config ./webpack.config.js",
+        "compile-tests": "tsc -p . --outDir out",
+        "watch-tests": "tsc -p . -w --outDir out",
+        "pretest": "npm run compile-tests && npm run compile && npm run lint",
+        "lint": "eslint src --ext ts",
+        "format-check": "prettier --check 'src/**/*.ts' 'build/**/*.yml' '.github/**/*.yml'",
+        "test": "node ./out/test/runTest.js",
+        "vsce-package": "vsce package -o vsplm.vsix"
+    },
+    "contributes": {
+        "configuration": {
+            "properties": {
+                "vsplm.args": {
+                    "default": [],
+                    "description": "Arguments passed in. Each argument is a separate item in the array.",
+                    "items": {
+                        "type": "string"
+                    },
+                    "scope": "resource",
+                    "type": "array"
+                },
+                "vsplm.path": {
+                    "default": [],
+                    "description": "When set to a path to vsplm binary, extension will use that. NOTE: Using this option may slowdown server response time.",
+                    "scope": "resource",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "vsplm.importStrategy": {
+                    "default": "fromEnvironment",
+                    "description": "Defines where `vsplm` is imported from. This setting may be ignored if `vsplm.path` is set.",
+                    "enum": [
+                        "useBundled",
+                        "fromEnvironment"
+                    ],
+                    "enumDescriptions": [
+                        "Always use the bundled version of `vsplm`.",
+                        "Use `vsplm` from environment, fallback to bundled version only if `vsplm` not available in the environment."
+                    ],
+                    "scope": "window",
+                    "type": "string"
+                },
+                "vsplm.interpreter": {
+                    "default": [],
+                    "description": "When set to a path to python executable, extension will use that to launch the server and any subprocess.",
+                    "scope": "resource",
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "vsplm.showNotifications": {
+                    "default": "off",
+                    "description": "Controls when notifications are shown by this extension.",
+                    "enum": [
+                        "off",
+                        "onError",
+                        "onWarning",
+                        "always"
+                    ],
+                    "enumDescriptions": [
+                        "All notifications are turned off, any errors or warning are still available in the logs.",
+                        "Notifications are shown only in the case of an error.",
+                        "Notifications are shown for errors and warnings.",
+                        "Notifications are show for anything that the server chooses to show."
+                    ],
+                    "scope": "machine",
+                    "type": "string"
+                }
+            }
+        },
+        "commands": [
+            {
+                "title": "Restart Server",
+                "category": "VS PLM",
+                "command": "vsplm.restart"
+            }
+        ]
+    },
+    "dependencies": {
+        "@vscode/python-extension": "1.0.1",
+        "fs-extra": "^11.1.1",
+        "vscode-languageclient": "^8.1.0"
+    },
+    "devDependencies": {
+        "@types/fs-extra": "^11.0.1",
+        "@types/vscode": "1.78.0",
+        "@types/glob": "^8.1.0",
+        "@types/node": "16.x",
+        "@typescript-eslint/eslint-plugin": "^6.2.0",
+        "@typescript-eslint/parser": "^6.2.0",
+        "@vscode/test-electron": "^2.3.3",
+        "@vscode/vsce": "^2.19.0",
+        "eslint": "^8.45.0",
+        "glob": "^10.3.3",
+        "prettier": "^3.0.0",
+        "typescript": "^5.1.6",
+        "ts-loader": "^9.4.4",
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4"
+    }
+}

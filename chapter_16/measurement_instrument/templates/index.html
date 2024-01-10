@@ -1,0 +1,24 @@
+<html>   
+<head>   
+    <title>Machine learning best practices for software engineers: Chapter 16 - Upload a file to make predictions</title>   
+</head>   
+<body>   
+    <h1>Machine learning best practices for software engineers - Chapter 16</h1>
+
+    <p>This page allows to upload a file to a web service that has been written using Flask. The web application behind this interface calculates metrics that are important for the predictions. It returns a JSON string with the metrics.  </p>
+
+    <p>We need another web app that contains the model in order to actually obtain predictions if the file can contain defects. </p>
+
+    <h1>Upload a file to make predictions</h1>
+    <p>The file should be a .c or .cpp file</p>
+
+    <form action = "/success" method = "post" enctype="multipart/form-data">   
+        <input type="file" name="file" />   
+        <input type = "submit" value="Upload">   
+    </form>
+    
+    <p>Disclaimer: the container saves the file it its local folder, so don't send any sensitive files for analysis.</p>
+
+    <p>This is a research prototype</p>
+</body>   
+</html>

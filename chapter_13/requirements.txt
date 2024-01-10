@@ -1,0 +1,6 @@
+transformers
+joblib
+pandas
+sklearn
+diffusers
+torch
