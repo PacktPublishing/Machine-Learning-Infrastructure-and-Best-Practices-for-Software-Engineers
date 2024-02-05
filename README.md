@@ -19,10 +19,8 @@ This book covers the following exciting features:
 * Work with testing and validation for machine learning systems
 
 If you feel this book is for you, get your [copy](https://www.amazon.com/Learning-Infrastructure-Practices-Software-Engineers/dp/1837634068/ref=sr_1_1?keywords=Machine+Learning+Infrastructure+and+Best+Practices+for+Software+Engineers&qid=1707111578&sr=8-1) today!
-
 <a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
 alt="https://www.packtpub.com/" border="5" /></a>
-
 ## Instructions and Navigations
 All of the code is organized into folders. For example, Chapter01.
 
@@ -39,14 +37,14 @@ def fibRec(n):
 If you’re a machine learning engineer, this book will help you design more robust software, and understand which scaling-up challenges you need to address and why. Software engineers will benefit from best practices that will make your products robust, reliable, and innovative. Decision makers will also find lots of useful information in this book, including guidance on what to look for in a well-designed machine learning software product.
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-17).
-### Software and Hardware List
+## Software and Hardware List
 | Chapter | Software required | OS required |
 | -------- | ------------------------------------ | ----------------------------------- |
 | 1-17 | Python 3.11 | Windows, Ubuntu, Debian Linux, or Windows Subsystem for Linux (WSL) |
 | 1-17 | PyTorch 2.1 | Windows, Ubuntu, or Debian Linux |
 
 
-### Related products
+## Related products
 * Practical Machine Learning on Databricks [[Packt]](https://www.packtpub.com/product/practical-machine-learning-on-databricks/9781801812030) [[Amazon]](https://www.amazon.com/Practical-Data-Science-Databricks-end/dp/1801812039/ref=sr_1_1?crid=3BV3BSP0VRHAQ&keywords=Practical+Machine+Learning+on+Databricks&qid=1707111966&sprefix=practical+machine+learning+on+databricks%2Caps%2C654&sr=8-1)
 
 * Machine Learning for Imbalanced Data [[Packt]](https://www.packtpub.com/product/machine-learning-for-imbalanced-data/9781801070836) [[Amazon]](https://www.amazon.com/Machine-Learning-Imbalanced-Data-imbalanced/dp/1801070830/ref=sr_1_1?crid=2MY5P4E91X68J&keywords=Machine+Learning+for+Imbalanced+Data&qid=1707112039&sprefix=machine+learning+for+imbalanced+data%2Caps%2C406&sr=8-1)
