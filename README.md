@@ -1,6 +1,3 @@
-
-<b><p align='center'>[![Packt Sale](https://static.packt-cdn.com/assets/images/packt+events/Improve_UX.png)](https://packt.link/algotradingpython)</p></b> 
-
 # Machine Learning Infrastructure and Best Practices for Software Engineers
 
 <a href="https://www.packtpub.com/product/machine-learning-infrastructure-and-best-practices-for-software-engineers/9781837634064"><img src="https://content.packt.com/B19548/cover_image_small.jpg" alt="no-image" height="256px" align="right"></a>
