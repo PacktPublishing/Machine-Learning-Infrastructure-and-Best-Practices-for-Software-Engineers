@@ -1,3 +1,5 @@
+<p align='center'><a href='https://www.eventbrite.com/e/machine-learning-and-generative-ai-system-design-workshop-tickets-1975103644168?aff=Github'><img src='https://static.packt-cdn.com/assets/images/packt+events/Sairam_ML_GenAI_Github_banner.png'/></a></p>
+
 # Machine Learning Infrastructure and Best Practices for Software Engineers
 
 <a href="https://www.packtpub.com/product/machine-learning-infrastructure-and-best-practices-for-software-engineers/9781837634064"><img src="https://content.packt.com/B19548/cover_image_small.jpg" alt="no-image" height="256px" align="right"></a>
