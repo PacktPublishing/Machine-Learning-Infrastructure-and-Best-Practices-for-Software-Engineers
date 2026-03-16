@@ -57,7 +57,7 @@
     "@huggingface/agents": "^0.0.5",
     "@huggingface/hub": "^0.8.4",
     "@huggingface/inference": "^2.6.1",
-    "node-fetch": "^2.6.1",
+    "node-fetch": "^2.6.7",
     "python-shell": "^5.0.0"
   }
 }
